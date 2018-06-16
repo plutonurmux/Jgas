@@ -1,0 +1,11 @@
+{
+  "HEADER" : {
+    "MENU" : {
+      "MAIN" : "Home",
+      "ABOUT" : "About Us",
+      "ESTATES" : "Properties",
+      "MAP" : "Properties Map",
+      "CONTACT" : "Contact"
+    }
+  }
+}

@@ -24,7 +24,7 @@
 #topBar .col-md-4 ul li:hover {
   background-color: transparent;
 }
-#topBar .col-md-4 ul li:first-of-type {
+#topBar .col-md-4 ul li {
   margin-right: -25px;
 }
 #topBar .col-md-4 ul li img {
