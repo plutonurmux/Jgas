@@ -4,8 +4,11 @@
   left: 0;
   width: inherit;
   height: 39px;
-  background-color: #243816;
-  border-bottom: 2px solid #1b2a11;
+  background-color: #19270f;
+  z-index: 1000;
+}
+#topBar ul {
+  margin-left: -50px !important;
 }
 #topBar ul li {
   display: inline-block;
@@ -30,5 +33,26 @@
 #topBar .col-md-4 ul li img {
   padding-left: 5px;
   padding-right: 5px;
-  height: 25px;
+  height: 21px;
+  margin-top: -4px;
+}
+#topMenu {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(36,56,22,1)),to(rgba(36,56,22,0)));
+  background-image: linear-gradient(to bottom,rgba(36,56,22,1),rgba(36,56,22,0));
+  background-repeat: repeat-x;
+  z-index: 10;
+  padding-top: 25px;
+}
+.brandImages {
+  max-height: 65px;
+  display: inline-block;
+}
+.brandImages:last-of-type {
+  margin-left: 15px;
+  margin-top: 21px;
 }

@@ -1,0 +1,10 @@
+#mainCover {
+  height: 75%;
+  width: 100%;
+  background: url("../../../assets/mock/cover.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 39px;
+  z-index: 9;
+}
