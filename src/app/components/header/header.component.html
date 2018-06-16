@@ -1,1 +1,35 @@
-<div>{{ 'HOME.MAIN' | translate }}</div>
+<section>
+  <div id="topBar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ul>
+            <li>{{ 'HEADER.MENU.MAIN' | translate }}</li>
+            <li>{{ 'HEADER.MENU.ABOUT' | translate }}</li>
+            <li>{{ 'HEADER.MENU.ESTATES' | translate }}</li>
+            <li>{{ 'HEADER.MENU.MAP' | translate }}</li>
+            <li>{{ 'HEADER.MENU.CONTACT' | translate }}</li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-right">
+          <ul>
+            <li>
+              <img src="../../../assets/flags/brazil.svg" (click)="setLang('pt_BR')" alt="">
+            </li>
+            <li>
+              <img src="../../../assets/flags/argentina.svg" (click)="setLang('es_AR')" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -12,13 +12,14 @@ import { MapComponent } from './components/map/map.component';
 import { PageHomeComponent } from './components/page-home/page-home.component';
 import { PageEstateComponent } from './components/page-estate/page-estate.component';
 import { PageMapComponent } from './components/page-map/page-map.component';
-import { PageCOntactComponent } from './components/page-contact/page-contact.component';
+import { PageContactComponent } from './components/page-contact/page-contact.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { FormComponent } from './components/form/form.component';
 import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpModule} from '@angular/http';
 import {BroadcasterService} from './services/broadcaster.service';
+import { PageCompanyComponent } from './components/page-company/page-company.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -36,9 +37,10 @@ export function createTranslateLoader(http: HttpClient) {
     PageHomeComponent,
     PageEstateComponent,
     PageMapComponent,
-    PageCOntactComponent,
+    PageContactComponent,
     SliderComponent,
-    FormComponent
+    FormComponent,
+    PageCompanyComponent
   ],
   imports: [
     BrowserModule,

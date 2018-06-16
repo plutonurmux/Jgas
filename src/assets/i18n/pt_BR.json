@@ -1,5 +1,11 @@
 {
   "HEADER" : {
-    "MAIN" : "Principal"
+    "MENU" : {
+      "MAIN" : "Principal",
+      "ABOUT" : "A Construtora",
+      "ESTATES" : "Imóveis",
+      "MAP" : "Imóveis no mapa",
+      "CONTACT" : "Contato"
+    }
   }
 }
