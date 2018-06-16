@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app.routes';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
@@ -12,6 +15,15 @@ import { PageMapComponent } from './components/page-map/page-map.component';
 import { PageCOntactComponent } from './components/page-contact/page-contact.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { FormComponent } from './components/form/form.component';
+import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpModule} from '@angular/http';
+import {BroadcasterService} from './services/broadcaster.service';
+
+// AoT requires an exported function for factories
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -29,9 +41,23 @@ import { FormComponent } from './components/form/form.component';
     FormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
+
   ],
-  providers: [],
+  providers: [
+    HttpClient,
+    BroadcasterService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
