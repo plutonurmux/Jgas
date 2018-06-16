@@ -10,6 +10,8 @@ import { PageHomeComponent } from './components/page-home/page-home.component';
 import { PageEstateComponent } from './components/page-estate/page-estate.component';
 import { PageMapComponent } from './components/page-map/page-map.component';
 import { PageCOntactComponent } from './components/page-contact/page-contact.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PageCOntactComponent } from './components/page-contact/page-contact.com
     PageHomeComponent,
     PageEstateComponent,
     PageMapComponent,
-    PageCOntactComponent
+    PageCOntactComponent,
+    SliderComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule
