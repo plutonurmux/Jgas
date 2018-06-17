@@ -1,11 +1,11 @@
 <section class="card-wrapper">
     <a href="/imovel/{{estate['imovel_id']}}/{{estate['imovel_ref']}}">
         <div class="panel" id="{{cardID}}">
-            <div class="panel-body">
+            <!--<div class="panel-body">-->
                 <div class="card-image-cover" [ngStyle]="{'background-image' : 'url(' + mediaPhotosUrl + estate['foto_url'] +')'}">
                     <div class="card-cover-code">COD: {{estate['imovel_ref']}}</div>
                 </div>
-                <hr>
+                <!--<hr>-->
                 <!--<div class="row">-->
                     <!--<div class="col-xs-3 text-center card-icons-wrapper">-->
                         <!--<img src="./assets/icons/bed-profile.svg" class="card-icon" alt="">-->
@@ -29,6 +29,6 @@
                     <!--</div>-->
                 <!--</div>-->
             </div>
-        </div>
+        <!--</div>-->
     </a>
 </section>
