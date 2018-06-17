@@ -1,6 +1,6 @@
 .items {
-  position: fixed;
-  top: 750px;
+  position: absolute;
+  /*top: 750px;*/
   left: 50%;
   text-align: center;
   width: 5000px;

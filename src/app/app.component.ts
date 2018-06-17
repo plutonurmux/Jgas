@@ -7,6 +7,9 @@ import {TranslateService} from '@ngx-translate/core';
   template: `
     <app-header></app-header>
     <router-outlet></router-outlet>
+    <div class="clearfix"></div>
+    <div style="padding-top: 210px"></div>
+    <hr>
     <app-footer></app-footer>
   `
 })
