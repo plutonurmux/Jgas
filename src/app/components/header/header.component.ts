@@ -12,7 +12,6 @@ export class HeaderComponent {
   public activeRouteName: string;
 
   constructor(private activeRoute: ActivatedRoute, private broadcaster: BroadcasterService ) {
-    console.log(this.activeRoute);
   }
 
   public setLang(lang: string) {

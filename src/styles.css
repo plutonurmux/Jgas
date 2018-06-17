@@ -1,13 +1,24 @@
 html, body, section {
   height: 100%;
   width: 100%;
+  background-color: #efefef;
 }
 app-root, app-slider, app-page-home {
   height: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Tajawal', sans-serif;
 }
 p, div, span {
   font-family: 'Oswald', sans-serif;
+}
+.btn-vargas {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  background-color: rgba(36,56,22,0.8);
+  color: whitesmoke;
+}
+.btn-vargas:hover {
+  background-color: rgba(36,56,22,1);
+  color: whitesmoke;
 }

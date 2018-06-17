@@ -1,0 +1,34 @@
+<section class="card-wrapper">
+    <a href="/imovel/{{estate['imovel_id']}}/{{estate['imovel_ref']}}">
+        <div class="panel" id="{{cardID}}">
+            <div class="panel-body">
+                <div class="card-image-cover" [ngStyle]="{'background-image' : 'url(' + mediaPhotosUrl + estate['foto_url'] +')'}">
+                    <div class="card-cover-code">COD: {{estate['imovel_ref']}}</div>
+                </div>
+                <hr>
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-3 text-center card-icons-wrapper">-->
+                        <!--<img src="./assets/icons/bed-profile.svg" class="card-icon" alt="">-->
+                        <!--<br />-->
+                        <!--<p [innerHTML]="sumBedrooms()"></p>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-3 text-center card-icons-wrapper">-->
+                        <!--<img src="./assets/icons/big-house-with-car-garage.svg" class="card-icon" alt="">-->
+                        <!--<br />-->
+                        <!--<p>{{estate['imovel_vaga']}}</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-3 text-center card-icons-wrapper">-->
+                        <!--<img src="./assets/icons/bathroom-sink.svg" class="card-icon" alt="">-->
+                        <!--<br />-->
+                        <!--<p>{{estate['imovel_banheiro']}}</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-3 text-center card-icons-wrapper">-->
+                        <!--<img src="./assets/icons/home-construction.svg" class="card-icon" alt="">-->
+                        <!--<br />-->
+                        <!--<p>{{estate['imovel_area']}} m2</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </a>
+</section>

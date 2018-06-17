@@ -1,1 +1,9 @@
 <app-slider></app-slider>
+
+<div class="container">
+  <div class="row" id="estatesRow">
+    <div class="col-md-3" *ngFor="let estate of estates">
+      <app-card [estate]="estate"></app-card>
+    </div>
+  </div>
+</div>

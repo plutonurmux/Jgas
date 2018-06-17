@@ -10,6 +10,7 @@ import {TranslateService} from '@ngx-translate/core';
     <app-footer></app-footer>
   `
 })
+
 export class AppComponent implements OnInit {
 
   constructor(private translate: TranslateService, private broadcaster: BroadcasterService) {
@@ -19,7 +20,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.broadcaster.on<string>('SET_LANGUAGE').subscribe( (lang) => { this.translate.use(lang); });
+    console.info('Hello Dave, you\'re looking well today.');
+    this.broadcaster.on<string>('SET_LANGUAGE').subscribe( (lang) => {
+      this.translate.use(lang);
+    });
   }
 
 }

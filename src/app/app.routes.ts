@@ -5,6 +5,7 @@ import {PageCompanyComponent} from './components/page-company/page-company.compo
 import {PageMapComponent} from './components/page-map/page-map.component';
 import {PageContactComponent} from './components/page-contact/page-contact.component';
 import {PageEstateComponent} from './components/page-estate/page-estate.component';
+import {PageHomeResolver} from './components/page-home/page-home.resolver';
 
 const ROUTES: Routes = [
   {
@@ -13,7 +14,8 @@ const ROUTES: Routes = [
     pathMatch: 'full'
   }, {
     path: 'home',
-    component: PageHomeComponent
+    component: PageHomeComponent,
+    resolve: { 'estates': PageHomeResolver }
   }, {
     path: 'construtora',
     component: PageCompanyComponent
@@ -33,7 +35,8 @@ const ROUTES: Routes = [
   imports: [ RouterModule.forRoot(ROUTES) ],
   exports: [ RouterModule ],
   providers: [
-    PageHomeComponent
+    PageHomeComponent,
+    PageHomeResolver
   ],
 })
 

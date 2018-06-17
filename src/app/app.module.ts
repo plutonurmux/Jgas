@@ -20,6 +20,9 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpModule} from '@angular/http';
 import {BroadcasterService} from './services/broadcaster.service';
 import { PageCompanyComponent } from './components/page-company/page-company.component';
+import {GenericHttpService} from './services/http.service';
+import {PageHomeService} from './components/page-home/page-home.service';
+import {CardComponent} from './components/card/card.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -40,7 +43,8 @@ export function createTranslateLoader(http: HttpClient) {
     PageContactComponent,
     SliderComponent,
     FormComponent,
-    PageCompanyComponent
+    PageCompanyComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,9 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   providers: [
     HttpClient,
-    BroadcasterService
+    BroadcasterService,
+    GenericHttpService,
+    PageHomeService
   ],
   bootstrap: [AppComponent]
 })
