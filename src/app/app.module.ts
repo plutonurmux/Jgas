@@ -23,6 +23,7 @@ import { PageCompanyComponent } from './components/page-company/page-company.com
 import {GenericHttpService} from './services/http.service';
 import {PageHomeService} from './components/page-home/page-home.service';
 import {CardComponent} from './components/card/card.component';
+import { PropertyComponent } from './components/property/property.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -44,7 +45,8 @@ export function createTranslateLoader(http: HttpClient) {
     SliderComponent,
     FormComponent,
     PageCompanyComponent,
-    CardComponent
+    CardComponent,
+    PropertyComponent
   ],
   imports: [
     BrowserModule,

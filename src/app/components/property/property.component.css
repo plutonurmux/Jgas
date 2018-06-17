@@ -1,0 +1,79 @@
+.items {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  text-align: center;
+  width: 5000px;
+  transform: translateY(-50%) translateX(-50%);
+  overflow-x: scroll;
+}
+.items li {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  list-style: none;
+  width: 300px;
+  height: 220px;
+  background-color: black;
+  transition-duration: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #efefef;
+}
+.items li .bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+.items li:hover {
+  transition-delay: 0.5s;
+  width: 500px;
+  height: 350px;
+  z-index: 777777;
+}
+.items li:hover a .content {
+  transform: translateY(0) translateX(-50%);
+  transition-delay: 0.75s;
+  opacity: 1;
+}
+.items li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.items li a .content {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(100%) translateX(-50%);
+  transition-duration: 1s;
+  opacity: 0;
+  padding: 40px 10px 10px 10px;
+}
+.items li a .content h2 {
+  font-weight: 300;
+  color: white;
+  font-size: 30px;
+}
+.card-icons-wrapper p {
+  font-weight: 600;
+  font-size: 1em;
+  margin-top: 10px;
+  color: #FFF;
+}
+.card-icons-wrapper:hover {
+  cursor: pointer;
+}
+.card-icon {
+  height: 25px;
+}
