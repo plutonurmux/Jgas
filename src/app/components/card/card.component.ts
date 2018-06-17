@@ -33,5 +33,16 @@ export class CardComponent implements AfterViewInit {
     return parseInt(this.estate['imovel_dormitorio'], 10) + parseInt(this.estate['imovel_suite'], 10);
   }
 
+  public setZIndex(enter: boolean): void {
+    if (enter) {
+      // @todo: fix z-index, magic numbers aren't cool
+      setTimeout(() => {
+        document.getElementById(this.cardID).style.zIndex = '777777 !important';
+      }, 150);
+      return;
+    }
+    document.getElementById(this.cardID).style.zIndex = 'inherit';
+  }
+
 }
 

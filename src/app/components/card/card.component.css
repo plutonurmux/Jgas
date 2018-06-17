@@ -46,3 +46,15 @@
 .card-icon {
     height: 25px;
 }
+.card-wrapper {
+  transform: translateX(-5%);
+}
+.card-wrapper:hover {
+  transform: scale(1.1);
+  transition-duration: .2s;
+  position: relative;
+}
+.card-wrapper:hover ~ .card-wrapper {
+  transform: translateX(5%);
+  opacity: 0%;
+}

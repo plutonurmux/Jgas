@@ -1,6 +1,6 @@
-<section class="card-wrapper">
+<section class="card-wrapper" (mouseenter)="setZIndex(true)" (mouseleave)="setZIndex(false)" id="{{cardID}}">
     <a href="/imovel/{{estate['imovel_id']}}/{{estate['imovel_ref']}}">
-        <div class="panel" id="{{cardID}}">
+        <div class="panel">
             <!--<div class="panel-body">-->
                 <div class="card-image-cover" [ngStyle]="{'background-image' : 'url(' + mediaPhotosUrl + estate['foto_url'] +')'}">
                     <div class="card-cover-code">COD: {{estate['imovel_ref']}}</div>

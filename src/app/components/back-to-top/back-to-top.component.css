@@ -1,0 +1,19 @@
+h1 {
+  color: #FFF !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#backToTop {
+  position: fixed;
+  bottom: 70px;
+  right: 45px;
+  background: rgba(52,56,56,0.7);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  z-index: 25000;
+  padding: 14px;
+}
+#backToTop:hover {
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Estate } from '../../model/estate.model';
 import {ActivatedRoute} from '@angular/router';
 
@@ -7,16 +7,12 @@ import {ActivatedRoute} from '@angular/router';
   templateUrl: './page-home.component.html',
   styleUrls: ['./page-home.component.css']
 })
-export class PageHomeComponent implements OnInit {
+export class PageHomeComponent  {
 
   public estates: Array<Estate>;
 
   constructor(private route: ActivatedRoute) {
     this.estates = route['data']['_value']['estates'];
-  }
-
-  ngOnInit() {
-    console.log(this.estates);
   }
 
 }
