@@ -1,31 +1,33 @@
-<ul class="items">
-  <li *ngFor="let estate of estates">
-    <div class="bg-img" [ngStyle]="{'background-image' : 'url(' + mediaPhotosUrl + estate['foto_url'] +')'}"></div>
-    <a href="#">
-      <div class="content">
-        <div class="row">
-          <div class="col-xs-3 text-center card-icons-wrapper">
-            <img src="./assets/icons/bed-profile.svg" class="card-icon" alt="">
-            <br />
-            <p [innerHTML]="sumBedrooms(estate)"></p>
-          </div>
-          <div class="col-xs-3 text-center card-icons-wrapper">
-            <img src="./assets/icons/big-house-with-car-garage.svg" class="card-icon" alt="">
-            <br />
-            <p>{{estate['imovel_vaga']}}</p>
-          </div>
-          <div class="col-xs-3 text-center card-icons-wrapper">
-            <img src="./assets/icons/bathroom-sink.svg" class="card-icon" alt="">
-            <br />
-            <p>{{estate['imovel_banheiro']}}</p>
-          </div>
-          <div class="col-xs-3 text-center card-icons-wrapper">
-            <img src="./assets/icons/home-construction.svg" class="card-icon" alt="">
-            <br />
-            <p>{{estate['imovel_area']}} m2</p>
+<div class="col-md-12">
+  <ul class="items">
+    <li *ngFor="let estate of estates">
+      <div class="bg-img" [ngStyle]="{'background-image' : 'url(' + mediaPhotosUrl + estate['foto_url'] +')'}"></div>
+      <a href="#">
+        <div class="content">
+          <div class="row">
+            <div class="col-xs-3 text-center card-icons-wrapper">
+              <img src="./assets/icons/bed-profile.svg" class="card-icon" alt="">
+              <br />
+              <p [innerHTML]="sumBedrooms(estate)"></p>
+            </div>
+            <div class="col-xs-3 text-center card-icons-wrapper">
+              <img src="./assets/icons/big-house-with-car-garage.svg" class="card-icon" alt="">
+              <br />
+              <p>{{estate['imovel_vaga']}}</p>
+            </div>
+            <div class="col-xs-3 text-center card-icons-wrapper">
+              <img src="./assets/icons/bathroom-sink.svg" class="card-icon" alt="">
+              <br />
+              <p>{{estate['imovel_banheiro']}}</p>
+            </div>
+            <div class="col-xs-3 text-center card-icons-wrapper">
+              <img src="./assets/icons/home-construction.svg" class="card-icon" alt="">
+              <br />
+              <p>{{estate['imovel_area']}} m2</p>
+            </div>
           </div>
         </div>
-      </div>
-    </a>
-  </li>
-</ul>
+      </a>
+    </li>
+  </ul>
+</div>

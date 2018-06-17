@@ -1,11 +1,10 @@
 .items {
   position: fixed;
-  top: 80%;
+  top: 750px;
   left: 50%;
   text-align: center;
   width: 5000px;
   transform: translateY(-50%) translateX(-50%);
-  overflow-x: scroll;
 }
 .items li {
   position: relative;
@@ -31,7 +30,6 @@
   transition-delay: 0.5s;
   width: 500px;
   height: 350px;
-  z-index: 777777;
 }
 .items li:hover a .content {
   transform: translateY(0) translateX(-50%);

@@ -12,6 +12,43 @@ h1, h2, h3, h4, h5, h6 {
 p, div, span {
   font-family: 'Oswald', sans-serif;
 }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #242727;
+}
+
+::-moz-selection {
+  background:#fa8231;
+  color: whitesmoke;
+}
+::selection {
+  background:#fa8231;
+  color: whitesmoke;
+}
+
+::placeholder {
+  color: #222 !important;
+  opacity: 1 !important;
+}
+
+:-ms-input-placeholder {
+  color: #222 !important;
+}
+
+::-ms-input-placeholder {
+  color: #222 !important;
+}
+
 .btn-vargas {
   text-transform: uppercase;
   font-size: 1.2em;
