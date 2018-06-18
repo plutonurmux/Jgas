@@ -3,10 +3,6 @@
   (mouseenter)="propertiesHorizontalScroll(false)"
   (mouseleave)="propertiesHorizontalScroll(true)"
 >
-  <div id="navWrapper">
-    <div id="next"></div>
-    <div id="previous"></div>
-  </div>
   <li *ngFor="let estate of estates">
     <div class="bg-img" [ngStyle]="{'background-image' : 'url(' + mediaPhotosUrl + estate['foto_url'] +')'}"></div>
     <a href="#">
@@ -39,3 +35,8 @@
 </ul>
 
 
+
+<div id="navWrapper">
+  <div class="nav-icons" id="next"></div>
+  <div class="nav-icons" id="previous"></div>
+</div>
