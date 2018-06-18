@@ -1,4 +1,8 @@
-<ul class="items" id="itemsList">
+<ul
+  class="items" id="itemsList"
+  (mouseenter)="propertiesHorizontalScroll(false)"
+  (mouseleave)="propertiesHorizontalScroll(true)"
+>
   <div id="navWrapper">
     <div id="next"></div>
     <div id="previous"></div>
