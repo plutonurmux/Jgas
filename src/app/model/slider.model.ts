@@ -5,4 +5,5 @@ export class Slider {
   slide_nome: string|null;
   slide_sub: string|null;
   slide_url: string|null;
+  position?: number;
 }

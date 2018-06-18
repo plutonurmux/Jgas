@@ -28,6 +28,11 @@ export class SliderComponent implements OnInit {
   ngOnInit() {
     this.service.get(AppConstants.ENDPOINT_HOME_SLIDES).subscribe( (res: Array<Slider>) => {
       this.slides = res;
+      let i = 0;
+      for (const pic of this.slides) {
+        pic.position = i;
+        i++;
+      }
       this.activeSlide = this.slides[SliderComponent.getRandomInt(0, this.slides.length - 1)];
       this.ready = true;
     });
@@ -39,9 +44,9 @@ export class SliderComponent implements OnInit {
   }
 
   public navigate(direction: string): void {
-
     if (direction === 'next') {
-      this.activeSlide = this.activeSlide[this.activeSlide['position'] + 1];
+      console.log('hello dave');
+      this.activeSlide = this.slides[this.activeSlide['position'] + 1];
       if (typeof this.activeSlide === 'undefined') {
         this.activeSlide = this.slides[0];
       }
@@ -49,7 +54,6 @@ export class SliderComponent implements OnInit {
     }
 
     this.activeSlide = this.slides[this.activeSlide['position'] - 1];
-
     if (typeof this.activeSlide === 'undefined') {
       this.activeSlide = this.slides[this.slides.length - 1];
     }
