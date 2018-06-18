@@ -24,6 +24,7 @@ import {GenericHttpService} from './services/http.service';
 import {PageHomeService} from './components/page-home/page-home.service';
 import {CardComponent} from './components/card/card.component';
 import { PropertyComponent } from './components/property/property.component';
+import {SliderService} from './components/slider/slider.service';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -61,11 +62,15 @@ export function createTranslateLoader(http: HttpClient) {
     })
 
   ],
+  // think about provide services only at
+  // components or provide them for global module
+  // which ways is better?
   providers: [
     HttpClient,
     BroadcasterService,
     GenericHttpService,
-    PageHomeService
+    PageHomeService,
+    SliderService
   ],
   bootstrap: [AppComponent]
 })

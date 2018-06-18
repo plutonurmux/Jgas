@@ -7,5 +7,8 @@
       "MAP" : "Properties Map",
       "CONTACT" : "Contact"
     }
+  },
+  "SLIDER" : {
+    "CHECK_PROPERTY" : "Check Property"
   }
 }

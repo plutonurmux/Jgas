@@ -4,14 +4,14 @@ import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
 import { PageHomeService } from './page-home.service';
 import { AppConstants } from '../../app.constants';
-import { Estate } from '../../model/estate.model';
+import { Property } from '../../model/property.model';
 
 @Injectable()
 export class PageHomeResolver implements Resolve<any> {
 
   constructor(private http: PageHomeService) {}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Array<Estate>>  {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Array<Property>>  {
     return Observable.create((observer: Observer<any>) => {
       this.http.get(AppConstants.ENDPOINT_INVESTMENT_PAGE)
         .subscribe(

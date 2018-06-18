@@ -1,13 +1,36 @@
 #mainCover {
   height: 75%;
   width: 100%;
-  background: url("../../../assets/mock/cover.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   position: absolute;
+  background-position: center center !important;
   top: 39px;
   z-index: 9;
   border-bottom: 2px solid rgba(36,56,22,1);
+}
+.nav-icons {
+  opacity: 0.7;
+}
+.nav-icons:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+#navLeft {
+  position: absolute;
+  top: 37%;
+  left: 25px;
+  z-index: 11;
+  width: 50px;
+  height: 50px;
+}
+#navRight {
+  position: absolute;
+  top: 37%;
+  right: 25px;
+  z-index: 11;
+  width: 50px;
+  height: 50px;
 }
 h1 {
   font-size: 4em;
@@ -18,7 +41,7 @@ h1,h2 {
   text-shadow: 1px 1px 1px rgba(2,2,2,.6);
   color: #fff;
 }
-#topMenu {
+#sliderOverlay {
   position: absolute;
   top: 39px;
   left: 0;

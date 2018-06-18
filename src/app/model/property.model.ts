@@ -1,7 +1,5 @@
-export class Estate {
-
-  // @todo: need to translate backend response
-
+export class Property {
+  // @todo: translate backend response
   imovel_id: string|null;
   imovel_ref: string|null;
   imovel_uf: string|null;
@@ -64,5 +62,4 @@ export class Estate {
   foto_url: string|null;
   foto_imovel: string|null;
   foto_pos: string|null;
-
 }

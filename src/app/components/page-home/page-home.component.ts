@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Estate } from '../../model/estate.model';
+import { Property } from '../../model/property.model';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class PageHomeComponent  {
 
-  public estates: Array<Estate>;
+  public estates: Array<Property>;
 
   constructor(private route: ActivatedRoute) {
     this.estates = route['data']['_value']['estates'];

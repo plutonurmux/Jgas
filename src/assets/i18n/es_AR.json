@@ -2,10 +2,13 @@
   "HEADER" : {
     "MENU" : {
       "MAIN" : "Principal",
-      "ABOUT" : "A Constructora",
-      "ESTATES" : "Immuebles",
-      "MAP" : "Immuebles en el mapa",
-      "CONTACT" : "Contacto"
+      "ABOUT" : "A Construtora",
+      "ESTATES" : "Imóveis",
+      "MAP" : "Imóveis no mapa",
+      "CONTACT" : "Contato"
     }
+  },
+  "SLIDER" : {
+    "CHECK_PROPERTY" : "Ver Propriedade"
   }
 }
