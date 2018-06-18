@@ -4,7 +4,7 @@
   -webkit-background-size: cover;
   background-size: cover;
   position: absolute;
-  background-position: center center !important;
+  background-position: bottom center !important;
   top: 39px;
   z-index: 9;
   border-bottom: 2px solid rgba(36,56,22,1);

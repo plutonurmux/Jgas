@@ -18,8 +18,9 @@ export class PropertyComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit() {
-    const itemsContainer: Element = document.getElementsByClassName('items')[0];
-    console.log(this.estates);
+    const itemsContainer: HTMLElement = document.getElementById('itemsList');
+    const itemsContainerWidth: number = ( this.estates.length + 1 ) * 300;
+    itemsContainer.style.width = itemsContainerWidth + 'px';
   }
 
   public sumBedrooms(estate): number {

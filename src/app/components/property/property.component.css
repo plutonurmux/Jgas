@@ -2,7 +2,7 @@
   position: absolute;
   left: 50%;
   text-align: center;
-  width: 5000px;
+  /*width: 5000px;*/
   transform: translateY(-50%) translateX(-50%);
 }
 .items li {

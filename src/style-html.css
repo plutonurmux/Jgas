@@ -52,13 +52,3 @@ p, div, span {
   color: #222 !important;
 }
 
-.btn-vargas {
-  text-transform: uppercase;
-  font-size: 1.2em;
-  background-color: rgba(36,56,22,0.8);
-  color: whitesmoke;
-}
-.btn-vargas:hover {
-  background-color: rgba(36,56,22,1);
-  color: whitesmoke;
-}

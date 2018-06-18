@@ -3,8 +3,8 @@
     "MENU" : {
       "MAIN" : "Principal",
       "ABOUT" : "A Construtora",
-      "ESTATES" : "Imóveis",
-      "MAP" : "Imóveis no mapa",
+      "ESTATES" : "Empreendimentos",
+      "MAP" : "Empreendimentos no mapa",
       "CONTACT" : "Contato"
     }
   },

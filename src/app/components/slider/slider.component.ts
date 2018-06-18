@@ -7,6 +7,8 @@ import {Slider} from '../../model/slider.model';
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css']
+  // @todo: fix loader for cover images
+  // styleUrls: ['./slider.component.css', './slider.loader.component.css']
 })
 
 export class SliderComponent implements OnInit {
@@ -35,15 +37,22 @@ export class SliderComponent implements OnInit {
       }
       this.activeSlide = this.slides[SliderComponent.getRandomInt(0, this.slides.length - 1)];
       this.ready = true;
+
+      setInterval( () => this.navigate('next'), 25000);
+
     });
   }
 
-  public imageLoader(z: string): void {
-    const currentImage = document.getElementById('currentImage');
-    currentImage.style.zIndex = z;
-  }
+  // @todo: fix loader for cover images
+  // public imageLoader(z: string): void {
+  //   const currentImage = document.getElementById('mainCover');
+  //   currentImage.style.zIndex = z;
+  // }
 
   public navigate(direction: string): void {
+
+    // this.imageLoader('-1');
+
     if (direction === 'next') {
       console.log('hello dave');
       this.activeSlide = this.slides[this.activeSlide['position'] + 1];
