@@ -14,56 +14,57 @@ export class PropertyComponent implements AfterViewInit {
   @Input()
   public estates: Array<Property>;
   public mediaPhotosUrl: string = AppConstants.MEDIA_PHOTOS;
+  private firstItem: HTMLElement;
+  private lastItem: HTMLElement;
 
   constructor() { }
+
+  private static transformMarginIntoNumber(margin: string): number {
+    if (margin === '') {
+      return 300;
+    }
+    return parseInt(margin.substring(0, margin.length - 2), 10);
+  }
+
+  private static isInViewPort(element: HTMLElement): boolean {
+    const bounding = element.getBoundingClientRect();
+    return (
+      bounding.top >= 0 &&
+      bounding.left >= 0 &&
+      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
 
   ngAfterViewInit() {
     const itemsContainer: HTMLElement = document.getElementById('itemsList');
     const itemsContainerWidth: number = ( this.estates.length + 1 ) * 300;
     itemsContainer.style.width = itemsContainerWidth + 'px';
+
+    this.firstItem = document.getElementById('itemNumber_0');
+    this.lastItem = document.getElementById('itemNumber_' + (this.estates.length - 1).toString());
   }
 
-  private scrollItems(onRight: boolean): void {
+  public scrollItems(onRight: boolean): void {
     const itemsContainer: HTMLElement = document.getElementById('itemsList');
+    let margin: string;
 
     if (onRight) {
-      let marginLeft = 300;
-      setInterval( () => {
-        if (itemsContainer.style.width < itemsContainer.style.marginLeft) {
-          itemsContainer.style.marginLeft = marginLeft + 'px';
-          marginLeft += 300;
+        if (!PropertyComponent.isInViewPort(this.lastItem)) {
+          margin = PropertyComponent.transformMarginIntoNumber(itemsContainer.style.marginLeft) - 300 + 'px';
+          itemsContainer.style.marginLeft = margin;
+          return;
         }
-      }, 200);
     }
 
+      if (!PropertyComponent.isInViewPort(this.firstItem)) {
+        margin = PropertyComponent.transformMarginIntoNumber(itemsContainer.style.marginLeft) + 300 + 'px';
+        itemsContainer.style.marginLeft = margin;
+      }
   }
 
   public sumBedrooms(estate): number {
     return parseInt(estate['imovel_dormitorio'], 10) + parseInt(estate['imovel_suite'], 10);
   }
-
-  public propertiesHorizontalScroll(isLeaving: boolean): void {
-    const itemsContainer: HTMLElement = document.getElementById('itemsList');
-    itemsContainer.addEventListener('mousemove', (e) => {
-
-      if (!isLeaving) {
-
-        if (window.innerWidth - e.screenX < 40) {
-          this.scrollItems(true);
-          return;
-        }
-
-        if ((window.innerWidth - e.screenX) < (window.innerWidth - 40)) {
-          this.scrollItems(false);
-          return;
-        }
-      }
-    });
-
-    if (isLeaving) {
-      itemsContainer.removeEventListener('mousemove', (e) => { console.log('Event canceled.'); });
-    }
-  }
-
 
 }

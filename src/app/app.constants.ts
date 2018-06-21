@@ -5,7 +5,7 @@ export class AppConstants {
   public static MEDIA_SLIDER: string = AppConstants.BASE_URL + '/midias/slide/';
   public static MEDIA_PHOTOS: string = AppConstants.BASE_URL + '/midias/fotos/';
 
-  public static ENDPOINT_HOME_PAGE: string = AppConstants.BASE_URL + '/home/';
+  public static ENDPOINT_HOME_PAGE: string = AppConstants.BASE_URL + '/todos/';
   public static ENDPOINT_ESTATE_PAGE: string = AppConstants.BASE_URL + '/estate/';
   public static ENDPOINT_ALL_ESTATE_PAGE: string = AppConstants.BASE_URL + '/principal/';
 

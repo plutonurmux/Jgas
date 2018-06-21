@@ -13,7 +13,7 @@ export class PageHomeResolver implements Resolve<any> {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Array<Property>>  {
     return Observable.create((observer: Observer<any>) => {
-      this.http.get(AppConstants.ENDPOINT_INVESTMENT_PAGE)
+      this.http.get(AppConstants.ENDPOINT_HOME_PAGE)
         .subscribe(
           (res) => { observer.next(res); observer.complete(); },
           (err) => { throw new Error(err); }

@@ -1,9 +1,5 @@
-<ul
-  class="items" id="itemsList"
-  (mouseenter)="propertiesHorizontalScroll(false)"
-  (mouseleave)="propertiesHorizontalScroll(true)"
->
-  <li *ngFor="let estate of estates">
+<ul class="items" id="itemsList">
+  <li *ngFor="let estate of estates; let i = index" id="itemNumber_{{i}}">
     <div class="bg-img" [ngStyle]="{'background-image' : 'url(' + mediaPhotosUrl + estate['foto_url'] +')'}"></div>
     <a href="#">
       <div class="content">
@@ -35,8 +31,11 @@
 </ul>
 
 
-
 <div id="navWrapper">
-  <div class="nav-icons" id="next"></div>
-  <div class="nav-icons" id="previous"></div>
+  <div class="nav-icons" id="next" (click)="scrollItems(true)">
+    <img src="./assets/nav/005-skip.svg" alt="" />
+  </div>
+  <div class="nav-icons" id="previous" (click)="scrollItems(false)">
+    <img src="./assets/nav/006-previous.svg" alt="" />
+  </div>
 </div>
