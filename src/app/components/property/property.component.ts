@@ -10,7 +10,6 @@ import {AppConstants} from '../../app.constants';
 
 export class PropertyComponent implements AfterViewInit {
 
-
   @Input()
   public estates: Array<Property>;
   public mediaPhotosUrl: string = AppConstants.MEDIA_PHOTOS;
@@ -49,18 +48,21 @@ export class PropertyComponent implements AfterViewInit {
     const itemsContainer: HTMLElement = document.getElementById('itemsList');
     let margin: string;
 
+
     if (onRight) {
-        if (!PropertyComponent.isInViewPort(this.lastItem)) {
-          margin = PropertyComponent.transformMarginIntoNumber(itemsContainer.style.marginLeft) - 300 + 'px';
-          itemsContainer.style.marginLeft = margin;
-          return;
-        }
+      if (PropertyComponent.isInViewPort(this.lastItem)) {
+        return;
+      }
+      margin = PropertyComponent.transformMarginIntoNumber(itemsContainer.style.marginLeft) - 300 + 'px';
+      itemsContainer.style.marginLeft = margin;
+      return;
     }
 
-      if (!PropertyComponent.isInViewPort(this.firstItem)) {
-        margin = PropertyComponent.transformMarginIntoNumber(itemsContainer.style.marginLeft) + 300 + 'px';
-        itemsContainer.style.marginLeft = margin;
-      }
+    if (PropertyComponent.isInViewPort(this.firstItem)) {
+      return;
+    }
+    margin = PropertyComponent.transformMarginIntoNumber(itemsContainer.style.marginLeft) + 300 + 'px';
+    itemsContainer.style.marginLeft = margin;
   }
 
   public sumBedrooms(estate): number {
