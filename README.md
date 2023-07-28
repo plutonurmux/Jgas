@@ -3,6 +3,7 @@
 
 # Angular 6 Real Estate Web Client
 
+**Kevin Hinojos**
 First of all: this is an **ongoing** project of a real estate website frontend application. 
 
 The complete work (with all of it's html, css and etc) of this application
